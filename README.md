@@ -49,7 +49,7 @@ Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 * **Fabricio** - *Trabalho Inicial* - [desenvolvedor](https://github.com/FabricioCS123)
 * **Cristian** - *Pesquisa Geral* - [umdesenvolvedor](https://github.com/MrGotardo01)
 * **Matheus** - *Pesquisa Geral* - [umdesenvolvedor](https://github.com/MrGotardo01)
-* **Matheus** - *Fluxograma* 
+* **Nicole** - *Fluxograma* 
 
 
 ## 📄 Licença
