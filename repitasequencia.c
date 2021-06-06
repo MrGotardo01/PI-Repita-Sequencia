@@ -14,10 +14,10 @@
 #define C_YELLOW    "\033[33m" // Constante que faz os caracteres serem amarelo
 #define C_BLUE      "\033[34m" // Constante que faz os caracteres serem azul
 #define C_MAGENTA   "\033[35m" // Constante que faz os caracteres serem roxo
-#define C_RESET  "\033[0m" // Constante que faz os caracteres voltarem para a coloraÁ„o padr„o do CMD;
+#define C_RESET  "\033[0m" // Constante que faz os caracteres voltarem para a colora√ß√£o padr√£o do CMD;
 
 //variaveis globais
-int cont = 1, flag = 0, tempo = 2000; //cont È o contador de rodadas do jogo, tempo È o que define a velocidade de aparecimento e desparecimento das cores
+int cont = 1, flag = 0, tempo = 2000; //cont √© o contador de rodadas do jogo, tempo √© o que define a velocidade de aparecimento e desparecimento das cores
 int melhorMarca[3]; //vetor para guardar a maior pontuacao do jogador
 char cores[5][10] ={"VERMELHO", "AMARELO", "ROXO", "VERDE", "AZUL"}; //matriz que define o nome das cores
 char respJog[5], respSeq[5]; //string respJog armazena as respostas do jogador e string respSeq armazena as respostas da sequencia
@@ -26,17 +26,17 @@ char respJN;
 void jogo();
 void sequencia();
 
-int tecla(){ // funÁ„o que verifica se alguma tecla esta sendo precionada
+int tecla(){ // fun√ß√£o que verifica se alguma tecla esta sendo precionada
     int varTecla;
     while (1){
-        if (kbhit()){            // caso alguma tecla esteja sendo precionada a funÁ„o irar armanezar o valor da tecla na variavel
+        if (kbhit()){            // caso alguma tecla esteja sendo precionada a fun√ß√£o irar armanezar o valor da tecla na variavel
             varTecla = getch(); // getch captura um caractere da entrada
             return varTecla;
         }
     }
 }
 
-void linha_Superior_Menu(){ // funÁ„o que cria linha superior do menu
+void linha_Superior_Menu(){ // fun√ß√£o que cria linha superior do menu
     int i;
     printf("\t\t%c", 201);
     for (i = 0; i < CONTROL_LINHA; i++){
@@ -45,7 +45,7 @@ void linha_Superior_Menu(){ // funÁ„o que cria linha superior do menu
     printf("%c\n", 187);
 }
 
-void linha_Rodape_Menu(){ // funÁ„o que cria linha rodape do menu
+void linha_Rodape_Menu(){ // fun√ß√£o que cria linha rodape do menu
     int i;
     printf("\t\t%c", 200);
     for (i = 0; i < CONTROL_LINHA; i++){
@@ -54,7 +54,7 @@ void linha_Rodape_Menu(){ // funÁ„o que cria linha rodape do menu
     printf("%c\n", 188);
 }
 
-void linha_Central_Menu(){ // funÁ„o que cria linha do meio do menu
+void linha_Central_Menu(){ // fun√ß√£o que cria linha do meio do menu
     int i;
     printf("\t\t%c", 204);
     for (i = 0; i < CONTROL_LINHA; i++){
@@ -63,7 +63,7 @@ void linha_Central_Menu(){ // funÁ„o que cria linha do meio do menu
     printf("%c\n", 185);
 }
 
-void jNovamente_Linha_Cima(){ // funÁ„o que cria linha superior do menu de jogar novamente
+void jNovamente_Linha_Cima(){ // fun√ß√£o que cria linha superior do menu de jogar novamente
     int i;
     printf("\t%c", 218);
     for (i = 0; i < CONTROL_LINHA2; i++){
@@ -72,7 +72,7 @@ void jNovamente_Linha_Cima(){ // funÁ„o que cria linha superior do menu de jogar
     printf("%c\n", 191);
 }
 
-void jNovamente_Linha_Baixo(){ // funÁ„o que cria linha inferior do menu de jogar novamente
+void jNovamente_Linha_Baixo(){ // fun√ß√£o que cria linha inferior do menu de jogar novamente
     int i;
     printf("\t%c", 192);
     for (i = 0; i < CONTROL_LINHA2; i++){
@@ -81,7 +81,7 @@ void jNovamente_Linha_Baixo(){ // funÁ„o que cria linha inferior do menu de joga
     printf("%c\n", 217);
 }
 
-void menu(){ // funÁ„o que faz o menu princial do jogo
+void menu(){ // fun√ß√£o que faz o menu princial do jogo
     int c;
     int lugar = 0;
     system("cls");            // limpa tela do console
@@ -94,37 +94,37 @@ void menu(){ // funÁ„o que faz o menu princial do jogo
     printf("\n\n\n\t*Use as setas do teclado para movimentacao das opcoes\n");
     printf("\t*Utilize o Enter para escolher uma das opcoes\n");
 
-    while (1){ // laÁo de repetiÁ„o infinito
+    while (1){ // la√ßo de repeti√ß√£o infinito
         if (kbhit()){ // se alguma tecla for precionada ele entrar dentro do if
             system("cls");
-            c = tecla();   // variavel c recebe funÁ„o criada anteriormente
+            c = tecla();   // variavel c recebe fun√ß√£o criada anteriormente
 
             if (c == 80){ //apertou para baixo
                 lugar++;       // variavel receber +1 no seu valor
                 if (lugar > 1){ // se o lugar for maior que 2
-                    lugar = 0; // ele volta para posiÁ„o inicial menu
+                    lugar = 0; // ele volta para posi√ß√£o inicial menu
                 }
             }
             if (c == 72){//apertou para cima
                 lugar--;       // variavel recebe -1 no seu valor
                 if (lugar < 0){ // se o lugar for menor que 0
-                    lugar = 1; // ele volta para ultima posiÁ„o do menu
+                    lugar = 1; // ele volta para ultima posi√ß√£o do menu
                 }
             }
             if (c == 75){//apertou para direita
                 lugar++;       // variavel receber +1 no seu valor
                 if (lugar > 1){ // se o lugar for maior que 2
-                    lugar = 0; // ele volta para posiÁ„o inicial menu
+                    lugar = 0; // ele volta para posi√ß√£o inicial menu
                 }
             }
             if (c == 77){//apertou para esquerda
                 lugar--;       // variavel recebe -1 no seu valor
                 if (lugar < 0){ // se o lugar for menor que 0
-                    lugar = 1; // ele volta para ultima posiÁ„o do menu
+                    lugar = 1; // ele volta para ultima posi√ß√£o do menu
                 }
             }
             if (c == 13) {//apertou [enter]
-                if (lugar == 0){// se o enter(opÁao de escolha) for apertado quando o menu estiver em "jogar" -  inicia o jogo
+                if (lugar == 0){// se o enter(op√ßao de escolha) for apertado quando o menu estiver em "jogar" -  inicia o jogo
                     linha_Superior_Menu();
                     printf("\t\t%c       INICIANDO O JOGO!      %C\n", 186, 186);
                     linha_Rodape_Menu();
@@ -134,7 +134,7 @@ void menu(){ // funÁ„o que faz o menu princial do jogo
                     break;
                 }
 
-                else if (lugar == 1){// se o enter(opÁao de escolha) for apertado quando o menu estiver em "sair" - inicia a funÁ„o de sair
+                else if (lugar == 1){// se o enter(op√ßao de escolha) for apertado quando o menu estiver em "sair" - inicia a fun√ß√£o de sair
                     system("cls");
                     linha_Superior_Menu();
                     printf("\t\t%c       SAINDO DO PROGRAMA!    %C\n", 186, 186);
@@ -143,7 +143,7 @@ void menu(){ // funÁ„o que faz o menu princial do jogo
                     exit(0);                // fecha o programa
                 }
             }
-            if (lugar == 0){ // apos detectar a tecla apertada o programa imprime o local aonde a seta que demonstra a opÁao de escolha esta
+            if (lugar == 0){ // apos detectar a tecla apertada o programa imprime o local aonde a seta que demonstra a op√ßao de escolha esta
                 linha_Superior_Menu();
                 printf("\t\t%c       REPITA A SEQUENCIA     %c\n", 186, 186);
                 linha_Central_Menu();
@@ -153,7 +153,7 @@ void menu(){ // funÁ„o que faz o menu princial do jogo
                 printf("\n\n\n\t*Use as setas do teclado para movimentacao das opcoes\n");
                 printf("\t*Utilize o Enter para escolher uma das opcoes\n");
             }
-            if (lugar == 1){// apos detectar a tecla apertada o programa imprime o local aonde a seta que demonstra a opÁao de escolha esta
+            if (lugar == 1){// apos detectar a tecla apertada o programa imprime o local aonde a seta que demonstra a op√ßao de escolha esta
                 linha_Superior_Menu();
                 printf("\t\t%c       REPITA A SEQUENCIA     %c\n", 186, 186);
                 linha_Central_Menu();
@@ -167,7 +167,7 @@ void menu(){ // funÁ„o que faz o menu princial do jogo
     }
 }
 
-void opcaoE(){ // funÁ„o que mostra as opÁıes de escolha de cores do jogo.
+void opcaoE(){ // fun√ß√£o que mostra as op√ß√µes de escolha de cores do jogo.
 
     printf("\tDigite a sequencia de cores que apareceram, sendo:\n ");
     printf("\tV - VERMELHO\n");
@@ -180,8 +180,8 @@ void opcaoE(){ // funÁ„o que mostra as opÁıes de escolha de cores do jogo.
 void sequencia(){ //funcao que gera aleatoriamente as cores do jogo
 
 	int i;
-	int op; //variavel usada para ser o meio de geraÁ„o das cores aleatoriamente
-    char letra; //variavel que define a opÁ„o de escolha sendo a respectiva letra para confrontar com a resposta do usuario
+	int op; //variavel usada para ser o meio de gera√ß√£o das cores aleatoriamente
+    char letra; //variavel que define a op√ß√£o de escolha sendo a respectiva letra para confrontar com a resposta do usuario
 
     for(i=0; i<5; i++){
 
@@ -377,12 +377,12 @@ void jogo(){ //funcao que opera o jogo
     }
 }
 
-void jogar_Novamente(){ // funÁ„o para jogar novamente
+void jogar_Novamente(){ // fun√ß√£o para jogar novamente
     jNovamente_Linha_Cima();
     printf("\t%c   Deseja jogar novamente ? [S/N]  %c\n", 179, 179);
     jNovamente_Linha_Baixo();
     respJN = getch();
-    respJN = toupper(respJN);      // transforma a resposta para uma letra mai˙scula
+    respJN = toupper(respJN);      // transforma a resposta para uma letra mai√∫scula
 
     Sleep(600);
     if (respJN != 'S' && respJN != 'N'){
@@ -390,23 +390,23 @@ void jogar_Novamente(){ // funÁ„o para jogar novamente
         jNovamente_Linha_Cima();
         printf("\t%c         Resposta invalida         %c\n", 179, 179);
         jNovamente_Linha_Baixo();
-        jogar_Novamente();        //chama a funÁ„o jogar_Novamente caso a resposta seja invalida para fazer uma nova escolha
+        jogar_Novamente();        //chama a fun√ß√£o jogar_Novamente caso a resposta seja invalida para fazer uma nova escolha
     }
 }
 
 
-int main(){ //funÁ„o principal
+int main(){ //fun√ß√£o principal
 
     do{ //entrar em loop se o jogador escolher jogar novamente
 
         system("cls");    // limpa a tela do console
-        menu();           // funÁ„o menu È iniciada tendo inicio a cadeia de eventos que leva ao jogo
+        menu();           // fun√ß√£o menu √© iniciada tendo inicio a cadeia de eventos que leva ao jogo
         flag = 0;
         tempo = 500;
         cont = 1;
         Sleep(500);       // progama esperar 0,5s antes de motrar o resultado
 
-        jogar_Novamente(); // funÁ„o de jogar novamente
+        jogar_Novamente(); // fun√ß√£o de jogar novamente
     }while (respJN == 'S'); // se a resposta for sim ele entrar em loop iniciando o menu novamente
 
     system("cls");
